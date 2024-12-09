@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Projects start -->
+<section class="projects" id="projects">
+    <h2 class="headings">Projects</h2>
+    <div class="projects-box">
+        {% for project in projects %}
+        <div class="project-card">
+            <img src="{% static project.image %}" alt="Project Image">
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
+            <a href="{{ project.repo_url }}" class="btn" target="_blank">Check Git Repo</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- Projects end -->
+{% endblock %}

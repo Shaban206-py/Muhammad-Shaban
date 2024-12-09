@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- About start -->
+<section class="about" id="about">
+    <div class="about-image">
+        <img src="{% static 'main/images/sha1.jpg' %}" alt="Image">
+
+    </div>
+    <div class="about-content">
+        <h2>About <span>Me</span></h2>
+        <p>
+            My name is Muhammad Shaban, and I am from **Rawalpindi, Pakistan**. I completed my Intermediate in Computer Science (ICS) in 2021, achieving 60% marks. Currently, I am working as a Full Stack Developer at **Xpert Business Solutions**, where I am honing my skills in both front-end and back-end web development. I am passionate about programming and constantly striving to enhance my technical abilities to contribute effectively to the development of innovative and efficient software solutions.
+        </p>
+      <a href="https://drive.google.com/file/d/1GJs5sD042YV-ILpzWrNzVRG7Px4DldeX/view?usp=sharing" class="btn" download target="_blank">Check Out my Resume</a>
+
+
+    </div>
+</section>
+<!-- About end -->
+{% endblock %}
