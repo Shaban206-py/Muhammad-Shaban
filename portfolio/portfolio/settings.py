@@ -7,9 +7,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-1a8)(jd9^%ja0wjpqc(x*w1=culmyz%kkq-wej_x85bk)9es%4'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shabandevist.com', 'www.shabandevist.com', 'localhost', '127.0.0.1']
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -85,16 +87,13 @@ USE_TZ = True
 
 
 # The path to the static files directory
-# Static files configuration
-STATIC_URL = '/static/'
+# For static files (CSS, JS)
+STATIC_URL = '/static/'  # URL path for static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory where static files will be collected
 
-# Add the 'static' directory from your app to STATICFILES_DIRS
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'main/static'),  # Path to the main/static directory
-]
-
-# The directory where static files will be collected during production
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# For media files (images, uploads)
+MEDIA_URL = '/media/'  # URL path for media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory where uploaded media files will be stored
 
 
 
