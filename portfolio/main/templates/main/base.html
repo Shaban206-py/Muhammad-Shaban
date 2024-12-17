@@ -1,0 +1,67 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar start-->
+    <header class="header">
+    <a href="/" class="logo">
+        Shaban <span>Saleem</span>
+    </a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="/">Home</a>       <!-- Absolute link for home -->
+        <a href="/about/">About</a>  <!-- Absolute link for about -->
+        <a href="/services/">Service</a>  <!-- Absolute link for services -->
+        <a href="/projects/">Project</a>  <!-- Absolute link for projects -->
+        <a href="/contact/">Contact me</a>   <!-- Absolute link for contact -->
+    </nav>
+    <a href="tel:+923129457206" class="gradient-btn">Contact me</a>
+</header>
+
+    <!-- Navbar end-->
+    
+    <!-- Main content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://github.com/Shaban206-py">
+                <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-shaban-saleem-1a6275322/">
+                <i class="bx bxl-linkedin-square"></i>
+           </a>
+     <a href="https://www.facebook.com/profile.php?id=100064611334231" target="_blank">
+    <i class="bx bxl-facebook"></i>  <!-- Facebook Icon -->
+</a>
+
+        </div>
+        <ul>
+            <li><a href="/">FAQ</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/about/">About me</a></li>
+            <li><a href="/projects/">Project</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <p class="copyright">
+            &#169; Shaban Saleem | All Rights Reserved
+        </p>
+    </footer>
+    <!-- Footer end -->
+
+    <script src="{% static 'main/script.js' %}"></script>
+</body>
+
+</html>
